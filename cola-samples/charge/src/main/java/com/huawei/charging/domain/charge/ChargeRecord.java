@@ -3,7 +3,7 @@ package com.huawei.charging.domain.charge;
 import com.huawei.charging.domain.charge.chargeplan.ChargePlanType;
 import lombok.Data;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity

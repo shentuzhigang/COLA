@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = Application.class)

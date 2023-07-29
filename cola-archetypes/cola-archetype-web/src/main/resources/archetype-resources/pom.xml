@@ -10,7 +10,7 @@
     <name>${artifactId}</name>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -18,8 +18,8 @@
 
         <cola.components.version>4.4.0-SNAPSHOT</cola.components.version>
 
-        <spring-boot.version>2.7.2</spring-boot.version>
-        <mybatis-starter.version>2.2.2</mybatis-starter.version>
+        <spring-boot.version>3.1.2</spring-boot.version>
+        <mybatis-starter.version>3.0.2</mybatis-starter.version>
     </properties>
 
     <modules>
@@ -93,18 +93,31 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis-starter.version}</version>
             </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.33</version>
+            </dependency>
 
             <!--Validation API-->
             <!--
-                - javax.validation:javax.validation
                 - org.hibernate.validator:hibernate-validator
-                - org.glassfish:jakarta.el
                 are declared in spring-boot-dependencies
             -->
             <dependency>
-                <groupId>javax.el</groupId>
-                <artifactId>javax.el-api</artifactId>
-                <version>3.0.0</version>
+                <groupId>jakarta.validation</groupId>
+                <artifactId>jakarta.validation-api</artifactId>
+                <version>3.0.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish</groupId>
+                <artifactId>jakarta.el</artifactId>
+                <version>4.0.2</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.el</groupId>
+                <artifactId>jakarta.el-api</artifactId>
+                <version>5.0.1</version>
             </dependency>
             <!--Validation API End -->
 
@@ -138,7 +151,7 @@
                     <version>3.4.0</version>
                 </plugin>
                 <plugin>
-                     <artifactId>maven-deploy-plugin</artifactId>
+                    <artifactId>maven-deploy-plugin</artifactId>
                     <version>3.0.0</version>
                 </plugin>
 
